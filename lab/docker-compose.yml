@@ -1,0 +1,57 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: dtrack
+      POSTGRES_USER: dtrack
+      POSTGRES_PASSWORD: dtrack
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dtrack"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  apiserver:
+    image: dependencytrack/apiserver:4.14.1
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      ALPINE_DATABASE_MODE: external
+      ALPINE_DATABASE_DRIVER: org.postgresql.Driver
+      ALPINE_DATABASE_URL: jdbc:postgresql://postgres:5432/dtrack
+      ALPINE_DATABASE_USERNAME: dtrack
+      ALPINE_DATABASE_PASSWORD: dtrack
+      # External analyzers are disabled — the lab runs in an isolated network
+      ALPINE_VULNANALYSIS_OSSINDEX_ENABLED: "false"
+      ALPINE_VULNANALYSIS_SNYK_ENABLED: "false"
+      ALPINE_VULNANALYSIS_TRIVY_ENABLED: "false"
+      ALPINE_INTERNAL_ANALYSIS_ENABLED: "true"
+    ports:
+      - "8081:8080"
+    volumes:
+      - dt-data:/data
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/api/version || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 60s
+
+  frontend:
+    image: dependencytrack/frontend:4.14.1
+    restart: unless-stopped
+    depends_on:
+      - apiserver
+    environment:
+      API_BASE_URL: http://localhost:8081
+    ports:
+      - "8082:8080"
+
+volumes:
+  pgdata:
+  dt-data:

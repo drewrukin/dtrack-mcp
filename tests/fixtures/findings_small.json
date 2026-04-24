@@ -1,0 +1,481 @@
+[
+    {
+        "component": {
+            "uuid": "387fa57f-29cc-40a7-b5b6-71781fa09b68",
+            "name": "logback-core",
+            "group": "ch.qos.logback",
+            "version": "1.5.17",
+            "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.17?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.5.32"
+        },
+        "vulnerability": {
+            "uuid": "8cb6ac63-1013-452a-802f-b7df15bd8dd6",
+            "source": "GITHUB",
+            "vulnId": "GHSA-25qh-j22f-pwp8",
+            "title": "QOS.CH logback-core is vulnerable to Arbitrary Code Execution through file processing",
+            "description": "QOS.CH logback-core versions up to 1.5.18 contain an ACE vulnerability in conditional configuration file processing in Java applications. This vulnerability allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting a malicious environment variable before program execution.\n\nA successful attack requires the Janino library and Spring Framework to be present on the user's class path. Additionally, the attacker must have write access to a configuration file. Alternatively, the attacker could inject a malicious environment variable pointing to a malicious configuration file. In both cases, the attack requires existing privileges.",
+            "cvssV4Score": 5.9,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:H/VI:L/VA:L/SC:H/SI:L/SA:L",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00058,
+            "epssPercentile": 0.17741,
+            "cweId": 20,
+            "cweName": "Improper Input Validation",
+            "cwes": [
+                {
+                    "cweId": 20,
+                    "name": "Improper Input Validation"
+                }
+            ],
+            "references": "* [https://nvd.nist.gov/vuln/detail/CVE-2025-11226](https://nvd.nist.gov/vuln/detail/CVE-2025-11226)\n* [https://logback.qos.ch/news.html#1.5.19](https://logback.qos.ch/news.html#1.5.19)\n* [https://github.com/qos-ch/logback/commit/61f6a2544f36b3016e0efd434ee21f19269f1df7](https://github.com/qos-ch/logback/commit/61f6a2544f36b3016e0efd434ee21f19269f1df7)\n* [https://github.com/qos-ch/logback/releases/tag/v_1.5.19](https://github.com/qos-ch/logback/releases/tag/v_1.5.19)\n* [https://github.com/qos-ch/logback/issues/974](https://github.com/qos-ch/logback/issues/974)\n* [https://logback.qos.ch/news.html#1.3.16](https://logback.qos.ch/news.html#1.3.16)\n* [https://github.com/advisories/GHSA-25qh-j22f-pwp8](https://github.com/advisories/GHSA-25qh-j22f-pwp8)",
+            "published": 1759311024000,
+            "aliases": [
+                {
+                    "cveId": "CVE-2025-11226",
+                    "ghsaId": "GHSA-25qh-j22f-pwp8"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "INTERNAL_ANALYZER",
+            "attributedOn": 1772168272995
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:387fa57f-29cc-40a7-b5b6-71781fa09b68:8cb6ac63-1013-452a-802f-b7df15bd8dd6"
+    },
+    {
+        "component": {
+            "uuid": "387fa57f-29cc-40a7-b5b6-71781fa09b68",
+            "name": "logback-core",
+            "group": "ch.qos.logback",
+            "version": "1.5.17",
+            "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.17?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.5.32"
+        },
+        "vulnerability": {
+            "uuid": "a2fde9da-00c1-4fd9-8ade-ae714c8a0a96",
+            "source": "GITHUB",
+            "vulnId": "GHSA-qqpg-mvqg-649v",
+            "title": "Logback allows an attacker to instantiate classes already present on the class path",
+            "description": "ACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a configuration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado.",
+            "cvssV4Score": 1.8,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L",
+            "severity": "LOW",
+            "severityRank": 3,
+            "epssScore": 0.00012,
+            "epssPercentile": 0.01655,
+            "cweId": 20,
+            "cweName": "Improper Input Validation",
+            "cwes": [
+                {
+                    "cweId": 20,
+                    "name": "Improper Input Validation"
+                }
+            ],
+            "references": "* [https://nvd.nist.gov/vuln/detail/CVE-2026-1225](https://nvd.nist.gov/vuln/detail/CVE-2026-1225)\n* [https://logback.qos.ch/news.html#1.5.25](https://logback.qos.ch/news.html#1.5.25)\n* [https://github.com/qos-ch/logback/issues/997](https://github.com/qos-ch/logback/issues/997)\n* [https://github.com/qos-ch/logback/commit/1f97ae1844b1be8486e4e9cade98d7123d3eded5](https://github.com/qos-ch/logback/commit/1f97ae1844b1be8486e4e9cade98d7123d3eded5)\n* [https://github.com/advisories/GHSA-qqpg-mvqg-649v](https://github.com/advisories/GHSA-qqpg-mvqg-649v)",
+            "published": 1769085082000,
+            "aliases": [
+                {
+                    "cveId": "CVE-2026-1225",
+                    "ghsaId": "GHSA-qqpg-mvqg-649v"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "INTERNAL_ANALYZER",
+            "attributedOn": 1772168273020
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:387fa57f-29cc-40a7-b5b6-71781fa09b68:a2fde9da-00c1-4fd9-8ade-ae714c8a0a96"
+    },
+    {
+        "component": {
+            "uuid": "0225daaf-663b-451a-aa64-1a0d3daa6103",
+            "name": "commons-compress",
+            "group": "org.apache.commons",
+            "version": "1.24.0",
+            "purl": "pkg:maven/org.apache.commons/commons-compress@1.24.0?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.28.0"
+        },
+        "vulnerability": {
+            "uuid": "38ff4dda-193a-4e96-883a-01c2f9a9d156",
+            "source": "GITHUB",
+            "vulnId": "GHSA-4265-ccf5-phj5",
+            "title": "Apache Commons Compress: OutOfMemoryError unpacking broken Pack200 file",
+            "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Commons Compress. This issue affects Apache Commons Compress: from 1.21 before 1.26.\n\nUsers are recommended to upgrade to version 1.26, which fixes the issue.",
+            "cvssV3BaseScore": 5.5,
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "cvssV4Score": 6.7,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00392,
+            "epssPercentile": 0.59791,
+            "cweId": 770,
+            "cweName": "Allocation of Resources Without Limits or Throttling",
+            "cwes": [
+                {
+                    "cweId": 770,
+                    "name": "Allocation of Resources Without Limits or Throttling"
+                }
+            ],
+            "references": "* [https://nvd.nist.gov/vuln/detail/CVE-2024-26308](https://nvd.nist.gov/vuln/detail/CVE-2024-26308)\n* [https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg](https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg)\n* [http://www.openwall.com/lists/oss-security/2024/02/19/2](http://www.openwall.com/lists/oss-security/2024/02/19/2)\n* [https://security.netapp.com/advisory/ntap-20240307-0009](https://security.netapp.com/advisory/ntap-20240307-0009)\n* [https://github.com/advisories/GHSA-4265-ccf5-phj5](https://github.com/advisories/GHSA-4265-ccf5-phj5)",
+            "published": 1708335052000,
+            "aliases": [
+                {
+                    "cveId": "CVE-2024-26308",
+                    "ghsaId": "GHSA-4265-ccf5-phj5"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "INTERNAL_ANALYZER",
+            "attributedOn": 1772168273079
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:0225daaf-663b-451a-aa64-1a0d3daa6103:38ff4dda-193a-4e96-883a-01c2f9a9d156"
+    },
+    {
+        "component": {
+            "uuid": "0225daaf-663b-451a-aa64-1a0d3daa6103",
+            "name": "commons-compress",
+            "group": "org.apache.commons",
+            "version": "1.24.0",
+            "purl": "pkg:maven/org.apache.commons/commons-compress@1.24.0?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.28.0"
+        },
+        "vulnerability": {
+            "uuid": "7eb51f47-cdd5-4b67-92e6-3efe60be1658",
+            "source": "GITHUB",
+            "vulnId": "GHSA-4g9r-vxhx-9pgx",
+            "title": "Apache Commons Compress: Denial of service caused by an infinite loop for a corrupted DUMP file",
+            "description": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in Apache Commons Compress. This issue affects Apache Commons Compress: from 1.3 through 1.25.0.\n\nUsers are recommended to upgrade to version 1.26.0 which fixes the issue.",
+            "cvssV3BaseScore": 5.9,
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:C/C:N/I:N/A:H",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00018,
+            "epssPercentile": 0.04555,
+            "cweId": 835,
+            "cweName": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+            "cwes": [
+                {
+                    "cweId": 835,
+                    "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+                }
+            ],
+            "references": "* [https://nvd.nist.gov/vuln/detail/CVE-2024-25710](https://nvd.nist.gov/vuln/detail/CVE-2024-25710)\n* [https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf](https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf)\n* [http://www.openwall.com/lists/oss-security/2024/02/19/1](http://www.openwall.com/lists/oss-security/2024/02/19/1)\n* [https://security.netapp.com/advisory/ntap-20240307-0010](https://security.netapp.com/advisory/ntap-20240307-0010)\n* [http://seclists.org/fulldisclosure/2024/Aug/37](http://seclists.org/fulldisclosure/2024/Aug/37)\n* [https://github.com/advisories/GHSA-4g9r-vxhx-9pgx](https://github.com/advisories/GHSA-4g9r-vxhx-9pgx)",
+            "published": 1708335050000,
+            "aliases": [
+                {
+                    "cveId": "CVE-2024-25710",
+                    "ghsaId": "GHSA-4g9r-vxhx-9pgx"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "INTERNAL_ANALYZER",
+            "attributedOn": 1772168273124
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:0225daaf-663b-451a-aa64-1a0d3daa6103:7eb51f47-cdd5-4b67-92e6-3efe60be1658"
+    },
+    {
+        "component": {
+            "uuid": "f237924a-cbe3-4e3b-b135-3a0555124085",
+            "name": "assertj-core",
+            "group": "org.assertj",
+            "version": "3.27.3",
+            "purl": "pkg:maven/org.assertj/assertj-core@3.27.3?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "4.0.0-M1"
+        },
+        "vulnerability": {
+            "uuid": "71a7fd77-620c-47f1-b783-cefca58096d4",
+            "source": "GITHUB",
+            "vulnId": "GHSA-rqfh-9r24-8c9r",
+            "title": "AssertJ has XML External Entity (XXE) vulnerability when parsing untrusted XML via isXmlEqualTo assertion",
+            "description": "An XML External Entity (XXE) vulnerability exists in `org.assertj.core.util.xml.XmlStringPrettyFormatter`: the `toXmlDocument(String)` method initializes `DocumentBuilderFactory` with default settings, without disabling DTDs or external entities. This formatter is used by the `isXmlEqualTo(CharSequence)` assertion for `CharSequence` values.\n\nAn application is vulnerable only when it uses untrusted XML input with one of the following methods:\n\n- `isXmlEqualTo(CharSequence)` from `org.assertj.core.api.AbstractCharSequenceAssert`\n- `xmlPrettyFormat(String)` from `org.assertj.core.util.xml.XmlStringPrettyFormatter`\n\n### Impact\n\nIf untrusted XML input is processed by the methods mentioned above (e.g., in test environments handling external fixture files), an attacker could:\n\n- **Read arbitrary local files** via `file://` URIs (e.g., `/etc/passwd`, application configuration files)\n- **Perform Server-Side Request Forgery (SSRF)** via HTTP/HTTPS URIs\n- **Cause Denial of Service** via \"Billion Laughs\" entity expansion attacks\n\n### Mitigation\n\n`isXmlEqualTo(CharSequence)` has been deprecated in favor of [XMLUnit](https://www.xmlunit.org/) in version 3.18.0 and will be removed in version 4.0. Users of affected versions should, in order of preference:\n\n1. Replace `isXmlEqualTo(CharSequence)` with XMLUnit, or\n2. Upgrade to version 3.27.7, or\n3. Avoid using `isXmlEqualTo(CharSequence)` or `XmlStringPrettyFormatter` with untrusted input.\n\n`XmlStringPrettyFormatter` has historically been considered a utility for `isXmlEqualTo(CharSequence)` rather than a feature for AssertJ users, so it is deprecated in version 3.27.7 and removed in version 4.0, with no replacement.\n\n### References\n\n- [CWE-611: Improper Restriction of XML External Entity Reference](https://cwe.mitre.org/data/definitions/611.html)\n- [OWASP XXE Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)",
+            "cvssV4Score": 8.2,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:L/SC:H/SI:N/SA:N",
+            "severity": "HIGH",
+            "severityRank": 1,
+            "epssScore": 0.00014,
+            "epssPercentile": 0.02638,
+            "cweId": 611,
+            "cweName": "Improper Restriction of XML External Entity Reference",
+            "cwes": [
+                {
+                    "cweId": 611,
+                    "name": "Improper Restriction of XML External Entity Reference"
+                }
+            ],
+            "references": "* [https://github.com/assertj/assertj/security/advisories/GHSA-rqfh-9r24-8c9r](https://github.com/assertj/assertj/security/advisories/GHSA-rqfh-9r24-8c9r)\n* [https://github.com/assertj/assertj/commit/85ca7eb6609bb179c043b85ae7d290523b1ba79a](https://github.com/assertj/assertj/commit/85ca7eb6609bb179c043b85ae7d290523b1ba79a)\n* [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)\n* [https://github.com/assertj/assertj/releases/tag/assertj-build-3.27.7](https://github.com/assertj/assertj/releases/tag/assertj-build-3.27.7)\n* [https://nvd.nist.gov/vuln/detail/CVE-2026-24400](https://nvd.nist.gov/vuln/detail/CVE-2026-24400)\n* [https://github.com/advisories/GHSA-rqfh-9r24-8c9r](https://github.com/advisories/GHSA-rqfh-9r24-8c9r)",
+            "published": 1769463101000,
+            "aliases": [
+                {
+                    "cveId": "CVE-2026-24400",
+                    "ghsaId": "GHSA-rqfh-9r24-8c9r"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "INTERNAL_ANALYZER",
+            "attributedOn": 1772168273243
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:f237924a-cbe3-4e3b-b135-3a0555124085:71a7fd77-620c-47f1-b783-cefca58096d4"
+    },
+    {
+        "component": {
+            "uuid": "387fa57f-29cc-40a7-b5b6-71781fa09b68",
+            "name": "logback-core",
+            "group": "ch.qos.logback",
+            "version": "1.5.17",
+            "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.17?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.5.32"
+        },
+        "vulnerability": {
+            "uuid": "681a3d76-4eca-41d6-86ee-c9f83849283a",
+            "source": "NVD",
+            "vulnId": "CVE-2025-11226",
+            "description": "ACE vulnerability in conditional configuration file processing  by QOS.CH logback-core up to and including version 1.5.18 in Java applications, allows an attacker to execute arbitrary code by compromising an existing logback configuration file or by injecting an environment variable before program execution.\n\n\n\nA successful attack requires the presence of Janino library and Spring Framework to be present on the user's class path. In addition, the attacker must\u00a0 have write access to a \nconfiguration file. Alternatively, the attacker could inject a malicious \nenvironment variable pointing to a malicious configuration file. In both \ncases, the attack requires existing privilege.",
+            "cvssV4Score": 5.9,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:L/AT:P/PR:H/UI:P/VC:H/VI:L/VA:L/SC:H/SI:L/SA:L/AU:N/RE:M/U:Green",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00058,
+            "epssPercentile": 0.1804,
+            "cweId": 20,
+            "cweName": "Improper Input Validation",
+            "cwes": [
+                {
+                    "cweId": 20,
+                    "name": "Improper Input Validation"
+                }
+            ],
+            "references": "* [https://logback.qos.ch/news.html#1.3.16](https://logback.qos.ch/news.html#1.3.16)\n* [https://logback.qos.ch/news.html#1.5.19](https://logback.qos.ch/news.html#1.5.19)",
+            "published": 1759306531250,
+            "aliases": [
+                {
+                    "cveId": "CVE-2025-11226",
+                    "ghsaId": "GHSA-25qh-j22f-pwp8"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "TRIVY_ANALYZER",
+            "attributedOn": 1775743510235
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:387fa57f-29cc-40a7-b5b6-71781fa09b68:681a3d76-4eca-41d6-86ee-c9f83849283a"
+    },
+    {
+        "component": {
+            "uuid": "387fa57f-29cc-40a7-b5b6-71781fa09b68",
+            "name": "logback-core",
+            "group": "ch.qos.logback",
+            "version": "1.5.17",
+            "purl": "pkg:maven/ch.qos.logback/logback-core@1.5.17?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.5.32"
+        },
+        "vulnerability": {
+            "uuid": "cc246aec-b448-4f57-bd95-3f007bd57440",
+            "source": "NVD",
+            "vulnId": "CVE-2026-1225",
+            "description": "ACE vulnerability in configuration file processing  by QOS.CH logback-core up to and including version 1.5.24 in Java applications, allows an attacker to instantiate classes already present on the class path by compromising an existing logback configuration file.\n\n\n\n\nThe instantiation of a potentially malicious Java class requires that said class is present on the user's class-path. In addition, the attacker must  have write access to a \nconfiguration file. However, after successful instantiation, the instance is very likely to be discarded with no further ado.",
+            "cvssV4Score": 1.8,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:H/AT:P/PR:H/UI:N/VC:L/VI:L/VA:L/SC:L/SI:L/SA:L/S:N/AU:N/RE:M/U:Green",
+            "severity": "LOW",
+            "severityRank": 3,
+            "epssScore": 0.00012,
+            "epssPercentile": 0.01679,
+            "cweId": 20,
+            "cweName": "Improper Input Validation",
+            "cwes": [
+                {
+                    "cweId": 20,
+                    "name": "Improper Input Validation"
+                }
+            ],
+            "references": "* [https://logback.qos.ch/news.html#1.5.25](https://logback.qos.ch/news.html#1.5.25)",
+            "published": 1769076967693,
+            "aliases": [
+                {
+                    "cveId": "CVE-2026-1225",
+                    "ghsaId": "GHSA-qqpg-mvqg-649v"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "TRIVY_ANALYZER",
+            "attributedOn": 1775743510449
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:387fa57f-29cc-40a7-b5b6-71781fa09b68:cc246aec-b448-4f57-bd95-3f007bd57440"
+    },
+    {
+        "component": {
+            "uuid": "f237924a-cbe3-4e3b-b135-3a0555124085",
+            "name": "assertj-core",
+            "group": "org.assertj",
+            "version": "3.27.3",
+            "purl": "pkg:maven/org.assertj/assertj-core@3.27.3?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "4.0.0-M1"
+        },
+        "vulnerability": {
+            "uuid": "e3e51ec9-f193-4658-ac93-1c6440378d01",
+            "source": "NVD",
+            "vulnId": "CVE-2026-24400",
+            "description": "AssertJ provides Fluent testing assertions for Java and the Java Virtual Machine (JVM). Starting in version 1.4.0 and prior to version 3.27.7, an XML External Entity (XXE) vulnerability exists in `org.assertj.core.util.xml.XmlStringPrettyFormatter`: the `toXmlDocument(String)` method initializes `DocumentBuilderFactory` with default settings, without disabling DTDs or external entities. This formatter is used by the `isXmlEqualTo(CharSequence)` assertion for `CharSequence` values. An application is vulnerable only when it uses untrusted XML input with either `isXmlEqualTo(CharSequence)` from `org.assertj.core.api.AbstractCharSequenceAssert` or `xmlPrettyFormat(String)` from `org.assertj.core.util.xml.XmlStringPrettyFormatter`. If untrusted XML input is processed by tone of these methods, an attacker couldnread arbitrary local files via `file://` URIs (e.g., `/etc/passwd`, application configuration files); perform Server-Side Request Forgery (SSRF) via HTTP/HTTPS URIs, and/or cause Denial of Service via \"Billion Laughs\" entity expansion attacks. `isXmlEqualTo(CharSequence)` has been deprecated in favor of XMLUnit in version 3.18.0 and will be removed in version 4.0. Users of affected versions should, in order of preference: replace `isXmlEqualTo(CharSequence)` with XMLUnit, upgrade to version 3.27.7, or avoid using `isXmlEqualTo(CharSequence)` or `XmlStringPrettyFormatter` with untrusted input. `XmlStringPrettyFormatter` has historically been considered a utility for `isXmlEqualTo(CharSequence)` rather than a feature for AssertJ users, so it is deprecated in version 3.27.7 and removed in version 4.0, with no replacement.",
+            "cvssV3BaseScore": 9.1,
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H",
+            "cvssV4Score": 8.2,
+            "cvssV4Vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:L/SC:H/SI:N/SA:N",
+            "severity": "HIGH",
+            "severityRank": 1,
+            "epssScore": 0.00014,
+            "epssPercentile": 0.02626,
+            "cweId": 611,
+            "cweName": "Improper Restriction of XML External Entity Reference",
+            "cwes": [
+                {
+                    "cweId": 611,
+                    "name": "Improper Restriction of XML External Entity Reference"
+                }
+            ],
+            "references": "* [https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)\n* [https://github.com/assertj/assertj/commit/85ca7eb6609bb179c043b85ae7d290523b1ba79a](https://github.com/assertj/assertj/commit/85ca7eb6609bb179c043b85ae7d290523b1ba79a)\n* [https://github.com/assertj/assertj/releases/tag/assertj-build-3.27.7](https://github.com/assertj/assertj/releases/tag/assertj-build-3.27.7)\n* [https://github.com/assertj/assertj/security/advisories/GHSA-rqfh-9r24-8c9r](https://github.com/assertj/assertj/security/advisories/GHSA-rqfh-9r24-8c9r)",
+            "published": 1769469368803,
+            "aliases": [
+                {
+                    "cveId": "CVE-2026-24400",
+                    "ghsaId": "GHSA-rqfh-9r24-8c9r"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "TRIVY_ANALYZER",
+            "attributedOn": 1775743510765
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:f237924a-cbe3-4e3b-b135-3a0555124085:e3e51ec9-f193-4658-ac93-1c6440378d01"
+    },
+    {
+        "component": {
+            "uuid": "0225daaf-663b-451a-aa64-1a0d3daa6103",
+            "name": "commons-compress",
+            "group": "org.apache.commons",
+            "version": "1.24.0",
+            "purl": "pkg:maven/org.apache.commons/commons-compress@1.24.0?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.28.0"
+        },
+        "vulnerability": {
+            "uuid": "a8da787d-4340-409a-8e34-300614319990",
+            "source": "NVD",
+            "vulnId": "CVE-2024-26308",
+            "description": "Allocation of Resources Without Limits or Throttling vulnerability in Apache Commons Compress.This issue affects Apache Commons Compress: from 1.21 before 1.26.\n\nUsers are recommended to upgrade to version 1.26, which fixes the issue.",
+            "cvssV3BaseScore": 5.5,
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00392,
+            "epssPercentile": 0.60223,
+            "cweId": 770,
+            "cweName": "Allocation of Resources Without Limits or Throttling",
+            "cwes": [
+                {
+                    "cweId": 770,
+                    "name": "Allocation of Resources Without Limits or Throttling"
+                }
+            ],
+            "references": "* [http://www.openwall.com/lists/oss-security/2024/02/19/2](http://www.openwall.com/lists/oss-security/2024/02/19/2)\n* [https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg](https://lists.apache.org/thread/ch5yo2d21p7vlqrhll9b17otbyq4npfg)\n* [https://security.netapp.com/advisory/ntap-20240307-0009/](https://security.netapp.com/advisory/ntap-20240307-0009/)",
+            "published": 1708334138277,
+            "aliases": [
+                {
+                    "cveId": "CVE-2024-26308",
+                    "ghsaId": "GHSA-4265-ccf5-phj5"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "TRIVY_ANALYZER",
+            "attributedOn": 1775743511329
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:0225daaf-663b-451a-aa64-1a0d3daa6103:a8da787d-4340-409a-8e34-300614319990"
+    },
+    {
+        "component": {
+            "uuid": "0225daaf-663b-451a-aa64-1a0d3daa6103",
+            "name": "commons-compress",
+            "group": "org.apache.commons",
+            "version": "1.24.0",
+            "purl": "pkg:maven/org.apache.commons/commons-compress@1.24.0?type=jar",
+            "project": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "latestVersion": "1.28.0"
+        },
+        "vulnerability": {
+            "uuid": "96ecb32f-f3e7-4805-ab4b-8c3c99625922",
+            "source": "NVD",
+            "vulnId": "CVE-2024-25710",
+            "description": "Loop with Unreachable Exit Condition ('Infinite Loop') vulnerability in Apache Commons Compress.This issue affects Apache Commons Compress: from 1.3 through 1.25.0.\n\nUsers are recommended to upgrade to version 1.26.0 which fixes the issue.",
+            "cvssV3BaseScore": 5.5,
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "severity": "MEDIUM",
+            "severityRank": 2,
+            "epssScore": 0.00018,
+            "epssPercentile": 0.04672,
+            "cweId": 835,
+            "cweName": "Loop with Unreachable Exit Condition ('Infinite Loop')",
+            "cwes": [
+                {
+                    "cweId": 835,
+                    "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+                }
+            ],
+            "references": "* [http://seclists.org/fulldisclosure/2024/Aug/37](http://seclists.org/fulldisclosure/2024/Aug/37)\n* [http://www.openwall.com/lists/oss-security/2024/02/19/1](http://www.openwall.com/lists/oss-security/2024/02/19/1)\n* [https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf](https://lists.apache.org/thread/cz8qkcwphy4cx8gltn932ln51cbtq6kf)\n* [https://security.netapp.com/advisory/ntap-20240307-0010/](https://security.netapp.com/advisory/ntap-20240307-0010/)",
+            "published": 1708334137943,
+            "aliases": [
+                {
+                    "cveId": "CVE-2024-25710",
+                    "ghsaId": "GHSA-4g9r-vxhx-9pgx"
+                }
+            ]
+        },
+        "analysis": {
+            "isSuppressed": false
+        },
+        "attribution": {
+            "analyzerIdentity": "TRIVY_ANALYZER",
+            "attributedOn": 1775743511632
+        },
+        "matrix": "164cc78e-e21f-4a1c-93a3-302caaad8e40:0225daaf-663b-451a-aa64-1a0d3daa6103:96ecb32f-f3e7-4805-ab4b-8c3c99625922"
+    }
+]

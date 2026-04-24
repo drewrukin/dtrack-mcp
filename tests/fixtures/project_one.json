@@ -1,0 +1,79 @@
+{
+    "authors": [],
+    "name": "adh-jmx-exporter",
+    "version": "0.0.0",
+    "classifier": "APPLICATION",
+    "collectionLogic": "NONE",
+    "purl": "pkg:maven/io.prometheus.jmx/jmx_exporter@1.2.0?type=pom",
+    "directDependencies": "[{\"name\":\"jmx_prometheus_common\",\"purl\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_common@1.2.0?type=jar\",\"uuid\":\"fe8e2bad-1bbb-4eca-beb3-46fdbad0324a\",\"version\":\"1.2.0\",\"group\":\"io.prometheus.jmx\",\"purlCoordinates\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_common@1.2.0\",\"objectType\":\"COMPONENT\"},{\"name\":\"jmx_prometheus_standalone\",\"purl\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_standalone@1.2.0?type=jar\",\"uuid\":\"6bdf0f26-1685-46a5-b181-fa83365ec7e0\",\"version\":\"1.2.0\",\"group\":\"io.prometheus.jmx\",\"purlCoordinates\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_standalone@1.2.0\",\"objectType\":\"COMPONENT\"},{\"name\":\"jmx_prometheus_javaagent\",\"purl\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent@1.2.0?type=jar\",\"uuid\":\"7acb55b1-99ad-41bc-b540-1f1667de6fc0\",\"version\":\"1.2.0\",\"group\":\"io.prometheus.jmx\",\"purlCoordinates\":\"pkg:maven/io.prometheus.jmx/jmx_prometheus_javaagent@1.2.0\",\"objectType\":\"COMPONENT\"}]",
+    "uuid": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+    "children": [],
+    "properties": [
+        {
+            "groupName": "project",
+            "propertyName": "primary",
+            "propertyValue": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "propertyType": "UUID",
+            "description": "Primary version"
+        }
+    ],
+    "tags": [
+        {
+            "name": "adh"
+        }
+    ],
+    "lastBomImport": 1772168272624,
+    "lastBomImportFormat": "CycloneDX 1.6",
+    "lastInheritedRiskScore": 15.0,
+    "lastVulnerabilityAnalysis": 1776082256754,
+    "active": true,
+    "isLatest": false,
+    "externalReferences": [
+        {
+            "type": "website",
+            "url": "https://github.com/prometheus/jmx_exporter"
+        }
+    ],
+    "metadata": {},
+    "versions": [
+        {
+            "uuid": "164cc78e-e21f-4a1c-93a3-302caaad8e40",
+            "version": "0.0.0",
+            "active": true
+        }
+    ],
+    "metrics": {
+        "critical": 0,
+        "high": 1,
+        "medium": 3,
+        "low": 1,
+        "unassigned": 0,
+        "vulnerabilities": 5,
+        "vulnerableComponents": 3,
+        "components": 45,
+        "suppressed": 0,
+        "findingsTotal": 5,
+        "findingsAudited": 0,
+        "findingsUnaudited": 5,
+        "inheritedRiskScore": 15.0,
+        "policyViolationsFail": 0,
+        "policyViolationsWarn": 0,
+        "policyViolationsInfo": 0,
+        "policyViolationsTotal": 0,
+        "policyViolationsAudited": 0,
+        "policyViolationsUnaudited": 0,
+        "policyViolationsSecurityTotal": 0,
+        "policyViolationsSecurityAudited": 0,
+        "policyViolationsSecurityUnaudited": 0,
+        "policyViolationsLicenseTotal": 0,
+        "policyViolationsLicenseAudited": 0,
+        "policyViolationsLicenseUnaudited": 0,
+        "policyViolationsOperationalTotal": 0,
+        "policyViolationsOperationalAudited": 0,
+        "policyViolationsOperationalUnaudited": 0,
+        "collectionLogic": "NONE",
+        "collectionLogicChanged": false,
+        "firstOccurrence": 1772168273878,
+        "lastOccurrence": 1776149877314
+    }
+}

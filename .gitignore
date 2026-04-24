@@ -1,0 +1,49 @@
+# Internal docs (Russian, not for public repo)
+DOCS/
+
+# Lab environment (credentials, local fixtures)
+lab/.env
+lab/fixtures/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# Editors / OS
+.idea/
+.vscode/
+*.DS_Store
+*.swp
+*.swo
+
+# Session logs (internal)
+logs/
+
+# Baselines (large / internal)
+baselines/
+
+# Claude Code local settings — may contain API keys from past Bash
+# permission grants; never commit.
+.claude/
+
+# Temp / scratch
+*.tmp
+*.bak
+
+# Local user shell helpers (personal sandbox / firejail wrappers).
+*.cmd
+
+# Internal lab smoke script — references Arenadata project names and
+# uses pre-v0.7 API (kept locally for the dev stand, not publishable).
+scripts/smoke_lab.py
