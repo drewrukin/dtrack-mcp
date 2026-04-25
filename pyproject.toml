@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dtrack-mcp"
-version = "0.7.1"
+version = "0.7.2"
 description = "Read-mostly MCP server for Dependency-Track with version lifecycle, single-call triage, duplicate-filtering ergonomics, strict input validation, broadcast triage, cross-project vulnerability search, and transient-failure retry"
 readme = "README.md"
 requires-python = ">=3.10"

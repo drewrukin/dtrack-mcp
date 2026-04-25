@@ -1,6 +1,7 @@
 # dtrack-mcp
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/dtrack-mcp.svg)](https://pypi.org/project/dtrack-mcp/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/drewrukin/dtrack-mcp/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![MCP](https://img.shields.io/badge/MCP-server-8A2BE2.svg)](https://modelcontextprotocol.io/)
 [![Dependency-Track](https://img.shields.io/badge/Dependency--Track-4.11%2B-brightgreen.svg)](https://dependencytrack.org/)
@@ -93,6 +94,12 @@ enforces this: any write path other than `PUT /api/v1/analysis` and
 Linux and macOS are the primary targets; Windows works under WSL.
 
 ## Installation
+
+```bash
+pip install dtrack-mcp
+```
+
+Or from source (for development):
 
 ```bash
 git clone https://github.com/drewrukin/dtrack-mcp.git
@@ -198,11 +205,11 @@ tunnel it. Equivalent to `curl --noproxy '*'`.
 
 ## Documentation
 
-- [`SPEC.md`](SPEC.md) — full protocol specification: normalized schemas,
+- [`SPEC.md`](https://github.com/drewrukin/dtrack-mcp/blob/main/SPEC.md) — full protocol specification: normalized schemas,
   per-tool input/output contracts, hard invariants, per-stage evolution.
-- [`scripts/smoke.py`](scripts/smoke.py) — end-to-end read-only smoke
+- [`scripts/smoke.py`](https://github.com/drewrukin/dtrack-mcp/blob/main/scripts/smoke.py) — end-to-end read-only smoke
   test; mirrors the shape of a real triage session.
-- [`scripts/smoke_retry.py`](scripts/smoke_retry.py) — retry-layer
+- [`scripts/smoke_retry.py`](https://github.com/drewrukin/dtrack-mcp/blob/main/scripts/smoke_retry.py) — retry-layer
   integration check; includes a recovery-probe mode that requires a
   live DT instance you can restart.
 
@@ -210,4 +217,4 @@ tunnel it. Equivalent to `curl --noproxy '*'`.
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](https://github.com/drewrukin/dtrack-mcp/blob/main/LICENSE).

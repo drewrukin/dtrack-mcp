@@ -5,6 +5,20 @@ All notable changes to **dtrack-mcp** will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.2] — 2026-04-25
+
+Packaging-only release for PyPI debut. No code changes.
+
+### Changed
+
+- README: relative links to `SPEC.md`, `scripts/smoke.py`, `scripts/smoke_retry.py`, and `LICENSE` rewritten to absolute GitHub URLs so they resolve on the PyPI project page.
+- README: `pip install dtrack-mcp` is now the primary install path; `git clone` documented as the dev-source path.
+- README: added PyPI version badge.
+
+### Added
+
+- `MANIFEST.in` so `CHANGELOG.md`, `LICENSE`, and `README.md` are bundled in the sdist.
+
 ## [0.7.1] — 2026-04-25
 
 Initial public release.
@@ -44,4 +58,5 @@ Initial public release.
 - Python 3.10–3.12.
 - Dependency-Track 4.11+; 4.14+ recommended (earlier DT versions lack EPSS-for-GHSA and CVSSv4 fields).
 
+[0.7.2]: https://github.com/drewrukin/dtrack-mcp/releases/tag/v0.7.2
 [0.7.1]: https://github.com/drewrukin/dtrack-mcp/releases/tag/v0.7.1
