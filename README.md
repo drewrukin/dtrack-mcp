@@ -1,5 +1,10 @@
 # dtrack-mcp
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![MCP](https://img.shields.io/badge/MCP-server-8A2BE2.svg)](https://modelcontextprotocol.io/)
+[![Dependency-Track](https://img.shields.io/badge/Dependency--Track-4.11%2B-brightgreen.svg)](https://dependencytrack.org/)
+
 MCP server that connects Claude (or any MCP-compatible LLM) to [Dependency-Track](https://dependencytrack.org/).
 
 Instead of clicking through the DT UI to triage hundreds of vulnerability findings, describe what you need in natural language — Claude pulls the data, reasons over it, and writes the verdict back.
@@ -90,8 +95,7 @@ Linux and macOS are the primary targets; Windows works under WSL.
 ## Installation
 
 ```bash
-# Replace with the repository URL once it is published.
-git clone <REPO_URL> dtrack-mcp
+git clone https://github.com/drewrukin/dtrack-mcp.git
 cd dtrack-mcp
 pip install -e .
 ```
